@@ -1,0 +1,16 @@
+# Backup files
+*.old
+*.backup
+result
+
+# DS_STORE
+.DS_STORE
+
+# Nix store links
+/nix/store
+# Vim config
+/common/vim/plugged
+
+# Secrets
+smb-secrets
+*.key
