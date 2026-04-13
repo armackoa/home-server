@@ -1,15 +1,15 @@
 keys:
-  - &periserver age1...
-  - &perihelie_periserver age1...
+  - &server age1...
+  - &user1_server age1...
 
 creation_rules:
-  - path_regex: modules/hosts/periserver/periserver_secrets\.yaml$
+  - path_regex: modules/hosts/server/server_secrets\.yaml$
     key_groups:
       - age:
-          - *periserver
-          - *perihelie_periserver
-  - path_regex: modules/users/perihelie/perihelie_secrets\.yaml$
+          - *server
+          - *user1_server
+  - path_regex: modules/users/user1/user1_secrets\.yaml$
     key_groups:
       - age:
-          - *perihelie_periserver
-          - *periserver
+          - *user1_server
+          - *server
